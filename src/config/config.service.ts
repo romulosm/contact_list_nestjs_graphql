@@ -28,6 +28,7 @@ export class ConfigService implements OnModuleInit {
     const envConfig = new ConfigEnv();
     envConfig.httpPort = parseInt(config.HTTP_PORT, 10);
     envConfig.nodeEnv = config.NODE_ENV;
+    envConfig.mongodbUri = config.MONGODBURI;
     return envConfig;
   }
 

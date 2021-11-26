@@ -15,6 +15,9 @@ export class ConfigEnv {
   @IsEnum(NodeEnv)
   nodeEnv: string;
 
+  @IsString()
+  mongodbUri: string;
+
   get isProduction(): boolean {
     return this.nodeEnv === NodeEnv.Production;
   }
